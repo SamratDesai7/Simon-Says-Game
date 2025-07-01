@@ -2,6 +2,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.2s;
+  position: relative;
 }
 
 .box1 {
@@ -17,20 +18,41 @@
   background-color: #577590;
 }
 
-.box:active {
-  transform: scale(0.98);
-  opacity: 0.8;
-}
 
-/* Maintain square aspect ratio for buttons */
-.aspect-ratio-1 {
-  padding-top: 100%;
-  position: relative;
-}
 .aspect-ratio-1 .box {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.box:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+/* Reduced height to 70% of width */
+.aspect-ratio-1 {
+  padding-top: 70%;
+  position: relative;
+}
+
+.aspect-ratio-1 .box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.flash {
+  background-color: #fff;
+}
+
+.userflash {
+  box-shadow: 0 0 20px white;
+}
+
+body.game-over {
+  background-color: #dc3545 !important;
+  transition: background-color 0.3s;
 }
