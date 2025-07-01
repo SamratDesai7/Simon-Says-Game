@@ -1,36 +1,36 @@
-* {
-  margin: 0%;
-  padding: 0%;
-}
-body {
-  text-align: center;
-}
-.container {
-  display: flex;
-  justify-content: center;
-}
-.box-btn {
-  height: 200px;
-  width: 200px;
-  margin: 2.5rem;
-  border: 2px solid black;
+.box {
   border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
+
 .box1 {
-  background-color: rgb(236, 57, 57);
+  background-color: #f94144;
 }
 .box2 {
-  background-color: rgb(74, 238, 74);
+  background-color: #f9c74f;
 }
 .box3 {
-  background-color: rgb(249, 249, 95);
+  background-color: #43aa8b;
 }
 .box4 {
-  background-color: rgb(79, 79, 241);
+  background-color: #577590;
 }
-.flash {
-  background-color: white;
+
+.box:active {
+  transform: scale(0.98);
+  opacity: 0.8;
 }
-.userflash {
-  background-color: rgb(0, 104, 16);
+
+/* Maintain square aspect ratio for buttons */
+.aspect-ratio-1 {
+  padding-top: 100%;
+  position: relative;
+}
+.aspect-ratio-1 .box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
