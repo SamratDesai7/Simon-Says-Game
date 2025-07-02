@@ -2,7 +2,13 @@ let gameSeq = [];
 let userSeq = [];
 let started = false;
 let level = 0;
-
+let howToPlayModal = document.getElementById("howToPlayModal");
+function display() {
+  howToPlayModal.style.display = "block";
+}
+hideModal = () => {
+  howToPlayModal.style.display = "none";
+};
 const h3 = document.querySelector("h3");
 const btns = ["box1", "box2", "box3", "box4"];
 
@@ -62,9 +68,9 @@ function handleButtonPress() {
   checkAnswer(userSeq.length - 1);
 }
 
-document.querySelectorAll(".box-btn").forEach((btn) =>
-  btn.addEventListener("click", handleButtonPress)
-);
+document
+  .querySelectorAll(".box-btn")
+  .forEach((btn) => btn.addEventListener("click", handleButtonPress));
 
 function resetGame() {
   started = false;
